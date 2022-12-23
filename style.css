@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+/* nav{
+    position: fixed;
+} */
+.nav-item .nav-link {
+  color: white;
+}
+
+.nav-item .nav-link:hover {
+  color: yellow;
+}
+
+.nav-item .nav-link:active {
+  color: yellow;
+  border-bottom: 1px solid yellow;
+  transition: all;
+}
+
+.carousel-item img {
+  height: 50vh;
+}
+
+.carousel-indicators button {
+  margin-bottom: 40px;
+}
+
+.carousel-inner {
+  position: relative;
+  color: white !important;
+  z-index: -1;
+  overflow: hidden;
+}
+.carousel-inner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  z-index: 1;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.carousel-control-next {
+  z-index: 99;
+}
+.carousel-control-prev {
+  z-index: 99;
+}
+
+.carousel-item {
+  position: relative;
+}
+.carousel-caption {
+  z-index: 9 !important;
+  position: absolute;
+  /* border: 1px solid red; */
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-caption h1 {
+  margin: 40px 0;
+}
+
+.carousel-btn button {
+  border: none;
+  width: 6em;
+  height: 2.5em;
+  margin: 0 5px;
+}
+
+.carousel-btn .btn-2 {
+  background-color: yellow;
+}
+.carousel-btn .btn-1:hover {
+  border: 2px solid rgb(255, 255, 255) !important;
+  background-color: transparent !important;
+  color: white !important;
+}
+
+.carousel-btn .btn-2:hover {
+  background-color: black;
+  color: white;
+  border: 2px solid yellow;
+}
+
+/* ======================= top grid system =========== */
+.top-grid-container {
+  display: grid;
+  padding: 20px;
+  height: auto;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+/* inner-grid-container */
+.inner-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+/* top-grid-items */
+.i-item {
+  background-color: rgb(237, 237, 237);
+  border-radius: 5px;
+}
+
+.grid-content {
+  text-align: center;
+}
+
+.grid-content img {
+  width: 50%;
+  height: auto;
+}
+
+/* .item-3 ,.item-4 {
+  height: 400px;
+} */
+
+.buy-btn {
+  width: 7em;
+  height: 3em;
+  border: 1px solid black;
+  background: transparent;
+}
+.buy-btn:hover {
+  border: none;
+  background-color: rgb(255, 234, 8);
+}
+
+/* ============ PRODUCT SECTION BG IMAGE */
+#produt-section {
+  background-image: url(https://img.freepik.com/free-photo/muscular-car-service-worker-repairing-vehicle_146671-19605.jpg?w=1380&t=st=1671635099~exp=1671635699~hmac=84bcd50a9fac0c715ce01fc62b360b308ee5261fbe396018a32edfbf7122e565);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+}
+
+.product-overlay {
+  background-color: rgba(0, 0, 0, 0.541);
+  height: auto;
+  padding: 50px 0;
+}
+
+.prod-buy-btn {
+  width: 7em;
+  height: 2.5em;
+  background: transparent;
+  border: 1px solid black;
+}
+
+.prod-buy-btn:hover {
+  background-color: rgb(255, 234, 8);
+  border: none;
+}
+
+/* -------------SECOND GRID SYSTEM --- */
+/* second-grid-container */
+.grid-container {
+  background-color: transparent;
+  height: auto;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 15px;
+  row-gap: 15px;
+  padding: 10px;
+}
+
+/* grid-items */
+.item {
+  background-color: white;
+  padding: 15px;
+}
+
+/* ----------- uppertext ------------ */
+.cardwrapper {
+  position: relative;
+}
+.upperText {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.upperText p {
+  color: rgb(187, 187, 187);
+  font-weight: bold;
+}
+
+/* cardoverlay */
+.cardOverlay {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.33);
+  height: 0px;
+  transition: all 0.4s linear !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.cardwrapper:hover .cardOverlay {
+  height: 100%;
+}
+
+.cardwrapper:hover .upperText {
+  display: none;
+}
+
+/* ===================================== RESPONSIVENESS ========================================= */
+/* ------------------- MIN WIDTH 992PX ----------------- */
+@media (min-width: 992px) {
+  .carousel-item img {
+    height: 80vh;
+  }
+
+  /* top-grid-container */
+  .top-grid-container {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* second-grid-container */
+  .grid-container {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* cardOverlay & upperText */
+  .upperText p {
+    padding: 0 100px 20px 0;
+  }
+}
+
+/* -====================== MIN-WIDTH-768PX ============================= */
+@media (min-width: 768px) {
+  /* cardOverlay & upperText */
+  .upperText p {
+    width: 100% !important;
+  }
+
+  .overlayContent {
+    width: 71% !important;
+    padding: 20px 30px;
+  }
+}
+
+/* -====================== MIN-WIDTH-576PX ============================= */
+@media (min-width: 576px) {
+  /* cardOverlay & upperText */
+  .upperText p {
+    width: 80%;
+  }
+  .overlayContent {
+    width: 60%;
+    padding: 20px 30px;
+  }
+}
