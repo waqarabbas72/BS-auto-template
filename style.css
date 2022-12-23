@@ -2,9 +2,6 @@
   box-sizing: border-box;
 }
 
-/* nav{
-    position: fixed;
-} */
 .nav-item .nav-link {
   color: white;
 }
@@ -56,7 +53,6 @@
 .carousel-caption {
   z-index: 9 !important;
   position: absolute;
-  /* border: 1px solid red; */
   top: 0;
   display: flex;
   flex-direction: column;
@@ -197,6 +193,19 @@
   padding: 10px 20px;
 }
 
+/* ------------------------- borderDivs ----------------- */
+.borderDiv1{
+  background-color: rgb(255, 210, 11);
+  height: 3px;
+  width: 50px;
+}
+
+.borderDiv2{
+  background-color: rgb(176, 9, 9);
+  height: 3px;
+  width: 50px;
+}
+
 .upperText p {
   color: rgb(187, 187, 187);
   font-weight: bold;
@@ -226,6 +235,86 @@
   display: none;
 }
 
+
+/* ------------- PARTS --------------- */
+.partsRow{
+  margin: 90px 0;
+  display: grid;
+  grid-template-columns: repeat(1 , 1fr);
+  grid-template-rows: repeat(4 ,1fr);
+  column-gap: 15px;
+  row-gap: 15px;
+}
+.partsDiv{
+  background-color: rgb(236, 236, 236);
+}
+
+.custombtn {
+  opacity: 0;
+}
+.partsDiv:hover .custombtn {
+  opacity: 1;
+  transform: translateY(-10px);
+  transition: all 0.3s linear;
+}
+
+
+/* hover on card */
+.partsDiv:hover{
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: all .5s;
+}
+
+/* ====================== VIDEO SECTION ==================== */
+.videoSection{
+  display: flex;
+  flex-direction: column;
+}
+
+.video div{
+  height: 400px;
+}
+.videoText{
+  width: 100%;
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.videoText button{
+  width: 120px;
+}
+
+.videoLine{
+  height: 4px;
+  width: 60px;
+  background: white;
+ }
+
+
+ /* ========== CONTACT SECTION ===========*/
+ .contact{
+  background: rgb(221, 221, 221);
+  padding: 50px 0;
+ }
+
+ .form{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+ padding: 20px;
+ width: 80%;
+ margin: 30px;
+ }
+
+ .form-input{
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+
+ }
+
 /* ===================================== RESPONSIVENESS ========================================= */
 /* ------------------- MIN WIDTH 992PX ----------------- */
 @media (min-width: 992px) {
@@ -249,6 +338,36 @@
   .upperText p {
     padding: 0 100px 20px 0;
   }
+
+  /* partsRow -GRID */
+  .partsRow{
+    grid-template-columns: repeat(4 , 1fr) !important;
+    grid-template-rows: repeat(1 ,1fr) !important;
+  }
+
+  /*  ------------- VIDEO-SECTION --------*/
+  .videoSection{
+    flex-direction: row;
+  }
+ 
+  .videoText{
+    width: 50%;
+    padding: 50px 100px;
+    height: 600px;
+  }
+
+  .video{
+    width: 50%;
+ }
+ .video div{
+  height: 600px;
+}
+
+/* form */
+.form{
+  width: 30%;
+}
+
 }
 
 /* -====================== MIN-WIDTH-768PX ============================= */
@@ -261,6 +380,12 @@
   .overlayContent {
     width: 71% !important;
     padding: 20px 30px;
+  }
+
+  /* partsRow -GRID */
+  .partsRow{
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(2 ,1fr);
   }
 }
 
