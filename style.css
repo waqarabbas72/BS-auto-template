@@ -315,6 +315,20 @@
 
  }
 
+
+ /* footer================ */
+ .linkBox ul{
+  list-style: none;
+  padding: 0;
+ }
+
+ /* links */
+ .links{
+  display: none;
+ }
+ .contactInformation{
+  border-left: 1px solid black;
+ }
 /* ===================================== RESPONSIVENESS ========================================= */
 /* ------------------- MIN WIDTH 992PX ----------------- */
 @media (min-width: 992px) {
@@ -387,6 +401,16 @@
     grid-template-columns: repeat(2 , 1fr);
     grid-template-rows: repeat(2 ,1fr);
   }
+
+  /* footer */
+   /* links */
+ #collapseExample1 , #collapseExample2 , #collapseExample3{
+   display: none;
+ }
+
+ .links{
+  display: block;
+ }
 }
 
 /* -====================== MIN-WIDTH-576PX ============================= */
