@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+/* main bg image  */
+.topImg{
+    position: relative;
+    overflow: hidden;
+}
+
+.topImg img{
+    height: 60vh;
+    width: 100%;
+}
+
+.topImg:hover .overlay{
+    background-color: transparent;
+    transition: all 1s ease-in-out;
+}   
+.topImg:hover img{
+    transform: scale(1.1);
+    transition: all 1s ease-in-out;
+}
+/* overlay */
+.overlay{
+    background-color: rgba(141, 134, 134, 0.476);
+    height: 60vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.overlay .content{
+    position: relative;
+    top: 40%;
+    left: 5%;
+}
+
+
+/* ============================= section MAIN ================== */
+.border{
+    background-color: black;
+    height: 50px;
+    width: 3px;
+}
+
+.headings ul li a{
+    color: rgb(117, 117, 117);
+}
+
+.headings ul li a:hover{
+    color: red;
+    transition: .5s;
+}
+
+.cardBox{
+    background-color: rgb(235, 235, 235);
+    border-radius: 6px;
+}
+
+.cardBox .text{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cardBox .text button{
+    margin-top:40px;
+}
+
+.cardBox .text button:hover{
+    background-color: red !important;
+    transition:all .5s;
+}
+
+.cardBox .text button:hover a{
+    color: white !important;
+    transition:all .5s;
+}
+
+.cardBox img{
+    height: 250px;
+}
+
+
+
+
+/* ======================================= RESPONSIVENESS ============================== */
+@media (min-width:576px) {
+    .topImg img{
+        height: 80vh;
+    }
+
+    .overlay{
+        height: 80vh;
+    }
+    .cardBox img{
+        height: auto;
+    }
+
+    .cardBox .text{
+        text-align: start;
+        margin-top: 0;
+    }
+}
