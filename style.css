@@ -314,7 +314,13 @@
   outline: none;
 
  }
+.submitBtn{
+  background-color: rgb(255, 210, 11);
+}
 
+.submitBtn:hover{
+  background-color: rgb(196, 196, 194);
+}
 
  /* footer================ */
  .linkBox ul{
